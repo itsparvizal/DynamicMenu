@@ -1,0 +1,16 @@
+.search {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 50px;
+}
+
+.searchinput {
+  background-color: rgb(56, 54, 54);
+  border-top: 0cap;
+  border-left: 0cap;
+  border-right: 0cap;
+  font-size: x-large;
+  color: beige;
+  outline: 0cap;
+}

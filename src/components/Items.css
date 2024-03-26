@@ -1,0 +1,19 @@
+.items {
+  display: flex;
+  align-self: center;
+  flex-wrap: wrap;
+}
+
+.buttons {
+  align-self: center;
+  font-size: x-large;
+  color: beige;
+  display: flex;
+  margin: 10px;
+}
+.more {
+  align-self: center;
+  font-size: x-large;
+  color: beige;
+  margin: 10px;
+}
