@@ -1,0 +1,17 @@
+.more {
+  position: absolute;
+  top: calc(100% + 1rem);
+  right: 4rem;
+
+  font-size: large;
+  display: none;
+  border: 1px solid grey;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.more.show {
+  display: flex;
+}

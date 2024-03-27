@@ -12,8 +12,10 @@
   margin: 10px;
 }
 .more {
+  cursor: pointer;
   align-self: center;
   font-size: x-large;
   color: beige;
-  margin: 10px;
+  display: flex;
+  margin: 15px;
 }

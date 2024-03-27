@@ -6,6 +6,7 @@ function Items({ items }) {
   const [visibleItemsCount, setVisibleItemsCount] = useState(
     getVisibleItemsCount()
   );
+  const [openMore, setopenMore] = useState(false);
   useEffect(() => {
     const handleResize = () => {
       setVisibleItemsCount(getVisibleItemsCount());
@@ -17,13 +18,9 @@ function Items({ items }) {
 
   function getVisibleItemsCount() {
     const screenWidth = window.innerWidth;
-    if (screenWidth >= 1820) {
-      return 10;
-    } else if (screenWidth >= 1600) {
-      return 8;
-    } else if (screenWidth >= 1500) {
+    if (screenWidth >= 1600) {
       return 7;
-    } else if (screenWidth >= 1400) {
+    } else if (screenWidth >= 1450) {
       return 6;
     } else if (screenWidth >= 1300) {
       return 5;
@@ -37,7 +34,6 @@ function Items({ items }) {
       return 0;
     }
   }
-
   return (
     <div
       className="items"
@@ -48,7 +44,18 @@ function Items({ items }) {
           {item}
         </div>
       ))}
-      <div className="more">More</div>
+      <div className="more" onClick={() => setopenMore(!openMore)}>
+        More
+      </div>
+      {openMore && (
+        <div className="extra">
+          {items.slice(visibleItemsCount).map((item, index) => (
+            <div className="buttons" key={index}>
+              {item}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
