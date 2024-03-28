@@ -1,17 +1,26 @@
-.more {
-  position: absolute;
-  top: calc(100% + 1rem);
-  right: 4rem;
-
-  font-size: large;
-  display: none;
-  border: 1px solid grey;
-  flex-direction: column;
-  padding: 15px;
-  border-radius: 15px;
-  background-color: white;
+.more-container {
+  position: relative;
 }
 
-.more.show {
+.more {
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100%); /* Position the dropdown just below its parent */
+  right: 0;
+  color: beige;
+  background-color: rgb(66, 64, 64);
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 5px;
   display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.dropdown > div {
+  padding: 5px;
 }

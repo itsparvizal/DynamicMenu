@@ -8,6 +8,7 @@
   align-self: center;
   font-size: x-large;
   color: beige;
+  cursor: pointer;
   display: flex;
   margin: 10px;
 }

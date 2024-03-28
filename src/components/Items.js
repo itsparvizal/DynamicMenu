@@ -1,12 +1,12 @@
 // Items.js
 import React, { useState, useEffect } from "react";
 import "./Items.css";
+import More from "./More";
 
 function Items({ items }) {
   const [visibleItemsCount, setVisibleItemsCount] = useState(
     getVisibleItemsCount()
   );
-  const [openMore, setopenMore] = useState(false);
   useEffect(() => {
     const handleResize = () => {
       setVisibleItemsCount(getVisibleItemsCount());
@@ -44,7 +44,14 @@ function Items({ items }) {
           {item}
         </div>
       ))}
-      <div className="more" onClick={() => setopenMore(!openMore)}>
+      <div className="more">
+        <More
+          title="MORE"
+          Items={items}
+          visibleItemsCount={visibleItemsCount}
+        />
+      </div>
+      {/* <div className="more" onClick={() => setopenMore(!openMore)}>
         More
       </div>
       {openMore && (
@@ -55,7 +62,7 @@ function Items({ items }) {
             </div>
           ))}
         </div>
-      )}
+      )} */}
     </div>
   );
 }
